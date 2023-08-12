@@ -28,8 +28,7 @@
 - `cmd+o` opens a new folder or file in vscode that can be outside the current working directory.
 
 **Copilot**
-- `enter` accepts suggestions.
-- `tab` rejects suggestions.
+- `ctrl+space` accepts suggestions.
 
 **CodeGPT**
 - Visually select code and then hit `ctrl+\`. Then type a question about the code you selected. Use `ctrl+\` again to close the chat.
