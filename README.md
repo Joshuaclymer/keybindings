@@ -16,7 +16,7 @@
 - `ctrl+enter` runs a block.
 - `shift+enter` runs a block and moves to the next block.
 - `option+shift+enter` restarts the kernel and runs all blocks up to the current block.
-- `ctrl+r` restarts the kernel.
+- `ctrl+shift+r` restarts the kernel.
 - `ctrl+option+x` clears all the outputs (good for reducing clutter). I recommend frequently clearing outputs.
 
 **Editor Navigation**
@@ -31,16 +31,16 @@
 - `ctrl+space` accepts suggestions.
 
 **CodeGPT**
-- Visually select code and then hit `ctrl+\`. Then type a question about the code you selected. Use `ctrl+\` again to close the chat.
+- Visually select code and then hit `ctrl+\`. Then type a question about the code you selected. Use `ctrl+b` to close the chat.
 - You can also open the chat normally by using `ctrl+\` 
 
 **File Explorer Navigation**
 - `/` opens search. Cancel with `tab`.
 - Use the standard `hjkl` keys to navigate the file tree. Use `ctrl+h` to go to parent without collapsing it (I like to collapse by defualt to keep it clean)
 - Use `l` or `enter` to open a file.
-- Use `ctrl+c`, `ctrl+x`, `ctrl+v`, `ctrl+d` to copy, cut, paste, and delete files respectively.
-- Use `ctrl+r` to rename a file or folder.
-- Use `ctrl+n` to create a new file and `ctrl+f` to create a new folder.
+- Use `c`, `x`, `v`, `d` to copy, cut, paste, and delete files respectively.
+- Use `r` to rename a file or folder.
+- Use `n` to create a new file and `f` to create a new folder.
 
 **Terminal**
 - `ctrl+t` toggles focus to terminal.
