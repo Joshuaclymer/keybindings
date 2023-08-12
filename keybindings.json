@@ -631,5 +631,101 @@
         "key": "escape",
         "command": "-editor.action.inlineSuggest.hide",
         "when": "inlineSuggestionVisible"
-    }
+    },
+    {
+        "key": "g g",
+        "command": "list.focusFirst",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "g g",
+        "command": "-list.focusFirst",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "shift+g",
+        "command": "list.focusLast",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "shift+g",
+        "command": "-list.focusLast",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "j",
+        "command": "list.focusDown",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "k",
+        "command": "list.focusUp",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "/",
+        "command": "list.find",
+        "when": "listFocus && listSupportsFind"
+    },
+    {
+        "key": "f3",
+        "command": "-list.find",
+        "when": "listFocus && listSupportsFind"
+    },
+    {
+        "key": "tab",
+        "command": "search.action.cancel",
+        "when": "listFocus && searchViewletVisible && !inputFocus && searchState != '0'"
+    },
+    {
+        "key": "escape",
+        "command": "-search.action.cancel",
+        "when": "listFocus && searchViewletVisible && !inputFocus && searchState != '0'"
+    },
+    {
+        "key": "tab",
+        "command": "list.clear",
+        "when": "listFocus && listHasSelectionOrFocus && !inputFocus"
+    },
+    {
+        "key": "escape",
+        "command": "-list.clear",
+        "when": "listFocus && listHasSelectionOrFocus && !inputFocus"
+    },
+    {
+        "key": "tab",
+        "command": "list.closeFind",
+        "when": "listFocus && treeFindOpen"
+    },
+    {
+        "key": "escape",
+        "command": "-list.closeFind",
+        "when": "listFocus && treeFindOpen"
+    },
+    {
+        "key": "h",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "list.focusParent",
+                "list.collapse",
+            ]
+        },
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "list.focusParent",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+alt+x",
+        "command": "list.collapseAll",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "shift+cmd+up",
+        "command": "-list.collapseAll",
+        "when": "listFocus && !inputFocus"
+    },
 ]

@@ -36,7 +36,8 @@
 - You can also open the chat normally by using `ctrl+\` 
 
 **File Explorer Navigation**
-- Use the standard `hjkl` keys to navigate the file tree.
+- `/` opens search. Cancel with `tab`.
+- Use the standard `hjkl` keys to navigate the file tree. Use `ctrl+h` to go to parent without collapsing it (I like to collapse by defualt to keep it clean)
 - Use `l` or `enter` to open a file.
 - Use `ctrl+c`, `ctrl+x`, `ctrl+v`, `ctrl+d` to copy, cut, paste, and delete files respectively.
 - Use `ctrl+r` to rename a file or folder.
