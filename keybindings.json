@@ -21,12 +21,12 @@
         }
     },
     {
-        "key": "d",
+        "key": "ctrl+d",
         "command": "deleteFile",
         "when": "listFocus && !inputFocus"
     },
     {
-        "key": "n",
+        "key": "ctrl+n",
         "command": "explorer.newFile",
         "when": "listFocus && !inputFocus"
     },
@@ -61,9 +61,9 @@
     //"when": "listFocus && !inputFocus"
     //},
     {
-        "key": "r",
+        "key": "ctrl+r",
         "command": "renameFile",
-        "when": "listFocus && !inputFocus",
+        "when": "filesExplorerFocus"
     },
     //{
     //"key": "ctrl+e",
@@ -197,7 +197,7 @@
         "when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
     },
     {
-        "key": "v",
+        "key": "ctrl+v",
         "command": "-notebook.cell.paste",
         "when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
     },
@@ -506,22 +506,22 @@
         //"when": "!sidebarVisible || explorerViewletVisible"
     },
     {
-        "key": "f",
+        "key": "ctrl+f",
         "command": "workbench.files.action.createFolderFromExplorer",
         "when": "filesExplorerFocus",
     },
     {
-        "key": "c",
+        "key": "ctrl+c",
         "command": "filesExplorer.copy",
         "when": "filesExplorerFocus"
     },
     {
-        "key": "v",
+        "key": "ctrl+v",
         "command": "filesExplorer.paste",
         "when": "filesExplorerFocus",
     },
     {
-        "key": "x",
+        "key": "ctrl+x",
         "command": "filesExplorer.cut",
         "when": "filesExplorerFocus",
     },
@@ -531,7 +531,7 @@
     ////"when": "sidebarVisible && !explorerViewletVisible"
     //},
     {
-        "key": "ctrl+space",
+        "key": "enter",
         "command": "editor.action.inlineSuggest.commit",
         "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorTabMovesFocus"
     },
@@ -584,7 +584,8 @@
     },
     {
         "key": "ctrl+r",
-        "command": "jupyter.restartkernel"
+        "command": "jupyter.restartkernel",
+        "when": "!filesExplorerFocus"
     },
     {
         "key": "d d",
@@ -608,7 +609,8 @@
     },
     {
         "key": "ctrl+c",
-        "command": "notebook.cell.cancelExecution"
+        "command": "notebook.cell.cancelExecution",
+        "when": "!filesExplorerFocus"
     },
     {
         "key": "alt+e",
@@ -619,5 +621,15 @@
         "key": "shift+f5",
         "command": "-workbench.action.debug.stop",
         "when": "inDebugMode && !focusedSessionIsAttach"
+    },
+    {
+        "key": "tab",
+        "command": "editor.action.inlineSuggest.hide",
+        "when": "inlineSuggestionVisible"
+    },
+    {
+        "key": "escape",
+        "command": "-editor.action.inlineSuggest.hide",
+        "when": "inlineSuggestionVisible"
     }
 ]
