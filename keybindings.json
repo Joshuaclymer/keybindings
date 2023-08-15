@@ -43,7 +43,7 @@
     {
         "key": "tab",
         "command": "extension.vim_escape",
-        "when": "editorTextFocus && vim.active && !inDebugRepl"
+        "when": "editorTextFocus && vim.active !inDebugRepl"
     },
     {
         "key": "tab",
@@ -63,7 +63,7 @@
     {
         "key": "r",
         "command": "renameFile",
-        "when": "filesExplorerFocus"
+        "when": "filesExplorerFocus && !inputFocus"
     },
     //{
     //"key": "ctrl+e",
@@ -508,22 +508,22 @@
     {
         "key": "f",
         "command": "workbench.files.action.createFolderFromExplorer",
-        "when": "filesExplorerFocus",
+        "when": "filesExplorerFocus && !inputFocus",
     },
     {
         "key": "c",
         "command": "filesExplorer.copy",
-        "when": "filesExplorerFocus"
+        "when": "filesExplorerFocus && !inputFocus",
     },
     {
         "key": "v",
         "command": "filesExplorer.paste",
-        "when": "filesExplorerFocus",
+        "when": "filesExplorerFocus && !inputFocus",
     },
     {
         "key": "x",
         "command": "filesExplorer.cut",
-        "when": "filesExplorerFocus",
+        "when": "filesExplorerFocus && !inputFocus",
     },
     //{
     //"key": "ctrl+\\",
@@ -613,7 +613,7 @@
         "when": "!filesExplorerFocus"
     },
     {
-        "key": "alt+e",
+        "key": "ctrl+c",
         "command": "workbench.action.debug.stop",
         "when": "inDebugMode && !focusedSessionIsAttach"
     },
@@ -708,14 +708,19 @@
         "args": {
             "commands": [
                 "list.focusParent",
-                "list.collapse",
+                //"list.collapse",
             ]
         },
         "when": "listFocus && !inputFocus"
     },
     {
+        "key": "ctrl+8",
+        "command": "editor.debug.action.removeInlineValues",
+        "when": "editorTextFocus && inDebugMode"
+    },
+    {
         "key": "ctrl+h",
-        "command": "list.focusParent",
+        "command": "list.collapse",
         "when": "listFocus && !inputFocus"
     },
     {
@@ -1316,15 +1321,21 @@
         "when": "editorTextFocus && vim.active && vim.use<C-w> && !inDebugRepl"
     },
     {
-        "key": "escape",
-        "command": "editor.action.inlineSuggest.hide",
-    },
-    {
         "key": "tab",
         "command": "-closeParameterHints",
     },
     {
         "key": "tab",
         "command": "-hideSuggestWidget",
+    },
+    {
+        "key": "tab",
+        "command": "cancelLinkedEditingInput",
+        "when": "LinkedEditingInputVisible && editorTextFocus"
+    },
+    {
+        "key": "escape",
+        "command": "-cancelLinkedEditingInput",
+        "when": "LinkedEditingInputVisible && editorTextFocus"
     },
 ]
